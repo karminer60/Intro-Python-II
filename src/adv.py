@@ -50,8 +50,31 @@ room['treasure'].s_to = room['narrow']
 #
 # If the user enters "q", quit the game.
 
-for i in outside:
-    print (currentRoom)
-    print(currentDescription)
-    input()
+while True:
+
+    choice = input("Where would you like to go?: ")
+
+    
+    if choice == 'south':
+        room = room.s_to
+        print(room)
+
+    elif choice == 'north':
+        room = room.n_to
+        print(room)
+
+    elif choice == 'west':
+        room = room.w_to
+        print(room)
+
+    elif choice == 'east':
+        room = room.e_to
+        print(room)
+    
+    elif choice == 'quit':
+        print('Thank you')
+        break
+
+    else: 
+        print('Does not exist')
     
