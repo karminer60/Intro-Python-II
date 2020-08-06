@@ -1,5 +1,5 @@
 from room import Room
-
+from player import Player
 # Declare all the rooms
 
 room = {
@@ -49,6 +49,15 @@ room['treasure'].s_to = room['narrow']
 # Print an error message if the movement isn't allowed.
 #
 # If the user enters "q", quit the game.
+
+player = Player(' ', outside)
+
+
+
+
+name = input('What is your name?: ')
+room = room[player.room]
+print(f"You ate currently in {player.room}, {room.description}")
 
 while True:
 
