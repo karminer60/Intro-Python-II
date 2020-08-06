@@ -50,33 +50,34 @@ room['treasure'].s_to = room['narrow']
 #
 # If the user enters "q", quit the game.
 
-player = Player(' ', outside)
+player = Player(' ', 'outside')
 
 
 
 
 name = input('What is your name?: ')
 room = room[player.room]
-print(f"You ate currently in {player.room}, {room.description}")
+print(f"You are currently here: {player.room},")
 
 while True:
 
     choice = input("Where would you like to go?: ")
 
-    
-    if choice == 'south':
+    breakpoint()
+
+    if choice == 'south' and hasattr(room, "s_to"):
         room = room.s_to
         print(room)
 
-    elif choice == 'north':
+    elif choice == 'north'and hasattr(room, "n_to"):
         room = room.n_to
         print(room)
 
-    elif choice == 'west':
+    elif choice == 'west' and hasattr(room, "w_to"):
         room = room.w_to
         print(room)
 
-    elif choice == 'east':
+    elif choice == 'east' and hasattr(room, "e_to"):
         room = room.e_to
         print(room)
     
