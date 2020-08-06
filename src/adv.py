@@ -82,7 +82,7 @@ while True:
         print(room)
     
     elif choice == 'quit':
-        print('Thank you')
+        print('Thank you for playing')
         break
 
     else: 
