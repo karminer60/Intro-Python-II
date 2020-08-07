@@ -6,7 +6,11 @@ class Player :
         self.room = room
         self.inventory = inventory 
 
-    def add_item9self, item):
+    def add_item(self, item):
         self.inventory.append(item)
-        return "" 
+     
+
+    def remove_item(self, ):
+
+
 
