@@ -1,5 +1,6 @@
 from room import Room
 from player import Player
+from item import Item
 # Declare all the rooms
 
 room = {
@@ -63,7 +64,6 @@ while True:
 
     choice = input("Where would you like to go?: ")
 
-    breakpoint()
 
     if choice == 'south' and hasattr(room, "s_to"):
         room = room.s_to

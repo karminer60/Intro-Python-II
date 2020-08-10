@@ -10,7 +10,18 @@ class Player :
         self.inventory.append(item)
      
 
-    def remove_item(self, ):
+    def remove_item(self, item_name):
+        for item in self.inventory:
+            if item_name == item.name:
+                self.inventory.remove(item)
+
+    def get_item_name(self, item_name):
+        for item in self.inventory:
+            if item_name == item.name:
+                return item
+            else:
+                return False
+
 
 
 
